@@ -17,6 +17,14 @@ body {
     color: white;
   }
   
+  #yes, #no {
+    position: absolute;
+  }
+  
+  #image-container {
+    position: absolute;
+  }
+
   #image-container img {
     max-width: 200px;
     margin-top: 20px;

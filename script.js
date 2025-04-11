@@ -5,19 +5,27 @@ const imageContainer = document.getElementById("image-container");
 const images = [
   "us.png",
   "sleepy.png",
-  "swing.png"
+  "plushie.png"
 ];
 
-noBtn.addEventListener("click", () => {
-  const randomImg = images[Math.floor(Math.random() * images.length)];
-  imageContainer.innerHTML = `<img src="${randomImg}" alt="Sad image">`;
-});
+yesBtn.addEventListener("click", () => {
+  const x = Math.random() * (window.innerWidth - 100);
+  const y = Math.random() * (window.innerHeight - 50);
 
-yesBtn.addEventListener("mouseover", () => {
+  // Move "Yes" button
   yesBtn.style.position = "absolute";
-  yesBtn.style.left = Math.random() * (window.innerWidth - 100) + "px";
-  yesBtn.style.top = Math.random() * (window.innerHeight - 50) + "px";
+  yesBtn.style.left = `${x}px`;
+  yesBtn.style.top = `${y}px`;
 
+  // Move "No" button to follow "Yes"
+  noBtn.style.position = "absolute";
+  noBtn.style.left = `${x + 120}px`;
+  noBtn.style.top = `${y}px`;
+
+  // Show new image near buttons
   const randomImg = images[Math.floor(Math.random() * images.length)];
-  imageContainer.innerHTML = `<img src="${randomImg}" alt="Happy image">`;
+  imageContainer.innerHTML = `<img src="${randomImg}" alt="Fun image">`;
+  imageContainer.style.position = "absolute";
+  imageContainer.style.left = `${x}px`;
+  imageContainer.style.top = `${y + 80}px`;
 });
