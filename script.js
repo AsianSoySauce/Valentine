@@ -3,7 +3,7 @@ const maxNoClicks = 4;
 const minNoScale = 0.65;
 let noScale = 1;
 let yesScale = 1; // This now tracks the scaling factor directly
-const imageContainer = document.getElementById("image-container")
+const gifElement = document.getElementById("chiikawa-gif")
 const noButton = document.getElementById("no-btn");
 const yesButton = document.getElementById("yes-btn");
 const buttonContainer = document.querySelector(".btn-container");
@@ -11,11 +11,11 @@ const yesButtonStyle = window.getComputedStyle(yesButton);
 const maxYesWidth = parseFloat(yesButtonStyle.maxWidth);
 
 // array of gifs - in order
-const images = [
-  "assets/images/togepi-happy.gif",
-  "assets/images/togepi-sad-1.gif",
-  "assets/images/togepi-sad-2.gif",
-  "assets/images/togepi-crying.gif",
+const gifs = [
+  "chiikawa-sad.gif",
+  "chiikawa-sad.gif",
+  "chiikawa-sad.gif",
+  "chiikawa-sad.gif",
 ];
 // array of messages
 const buttonMessages = [
@@ -29,7 +29,7 @@ const buttonMessages = [
 noButton.addEventListener("click", () => {
   if (noClicks < maxNoClicks) {
     // change image
-    imageElement.src = images[noClicks];
+    gifElement.src = gifs[noClicks];
   }
 
   // change no button text
