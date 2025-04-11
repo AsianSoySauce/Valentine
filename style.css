@@ -17,18 +17,18 @@
     text-align: center;
     margin: 0;
     padding: 75px 0;
-    background: linear-gradient(#ffffff, #f9d6d6);
-    font-family: "Steph", sans-serif;
+    background: linear-gradient(#ec95a3, #ec95dc);
+    font-family: "Cookie", sans-serif;
   }
   
   @font-face {
-    font-family: "Steph";
+    font-family: "Cookie";
     src: url("Cookiemonster-gv11.ttf");
     font-weight: normal;
   }
   
   @font-face {
-    font-family: "Steph";
+    font-family: "Cookie";
     src: url("Cookiemonster-gv11.ttf");
     font-weight: bold;
   }
